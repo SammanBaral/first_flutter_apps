@@ -1,6 +1,7 @@
 import 'package:first_flutter_apps/view/arithmetic_view.dart';
 import 'package:first_flutter_apps/view/first_view.dart';
 import 'package:first_flutter_apps/view/simple_interest_view.dart';
+import 'package:first_flutter_apps/view/area_of_circle_view.dart';
 import 'package:flutter/material.dart';
 
 class DashboardView extends StatelessWidget {
@@ -57,14 +58,13 @@ class DashboardView extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const ArithmeticView()),
+                  MaterialPageRoute(builder: (context) => const AreaOfCircleView()),
                 );
               },
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.ac_unit),
+                  Icon(Icons.circle),
                   Text('Area of Circle'),
                 ],
               ),
