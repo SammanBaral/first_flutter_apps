@@ -8,6 +8,7 @@ import 'package:first_flutter_apps/view/show_snackbar_view.dart';
 import 'package:first_flutter_apps/view/simple_interest_view.dart';
 import 'package:first_flutter_apps/view/area_of_circle_view.dart';
 import 'package:first_flutter_apps/view/student_details_view.dart';
+import 'package:first_flutter_apps/view/student_output_view.dart';
 import 'package:flutter/material.dart';
 
 class DashboardView extends StatelessWidget {
@@ -191,6 +192,23 @@ class DashboardView extends StatelessWidget {
                 children: [
                   Icon(Icons.person),
                   Text('Student Details View'),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const StudentOutputView()),
+                );
+              },
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.person_2),
+                  Text('Student Output View'),
                 ],
               ),
             ),

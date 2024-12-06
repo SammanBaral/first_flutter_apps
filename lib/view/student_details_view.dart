@@ -109,6 +109,19 @@ class _StudentDetailsViewState extends State<StudentDetailsView> {
                 child: const Text('Add Student'),
               ),
             ),
+             _gap,
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/output',
+                      arguments: _students,
+                    );
+                  },
+                  child: const Text("View students")),
+            ),
             _gap,
             // Extracted Widget for displaying students
             _students.isEmpty
